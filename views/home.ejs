@@ -1,18 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom Clone</title>
-</head>
-<body>
-    HI! This is Home
-    <button>
-     <a href="/new-meeting">New Meeting</a>
-    </button>
-    <input type="text" placeholder="Enter Code Here">
-    <button>
-        Join
-    </button>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Tailwind -->
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							clifford: '#da373d',
+						},
+						backgroundImage: {
+							'hero-pattern': "url('/img/hero-pattern.svg')",
+							'footer-texture': "url('/img/footer-texture.png')",
+							iphone: "url('/iphone.jpg')",
+						},
+					},
+				},
+			};
+		</script>
+
+		<style type="text/tailwindcss">
+			@layer utilities {
+				.content-auto {
+					content-visibility: auto;
+				}
+			}
+		</style>
+
+		<style>
+			@media (max-width: 500px) {
+				.media-class {
+					display: none;
+				}
+			}
+			@media (max-height: 600px) {
+				.media-class {
+					display: none;
+				}
+			}
+		</style>
+
+		<title>Zoom Clone</title>
+	</head>
+	<body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+		<div class="h-[100vh] relative flex flex-col justify-center items-center">
+			<image src="/iphone 1.png" class="h-[600px] m-auto media-class" />
+		</div>
+
+		<div
+			class="flex flex-col justify-center items-center text-center bg-color-red absolute bottom-0 left-0 top-0 right-0 m-auto max-w-[270px]"
+		>
+			<form action="/join-meeting" method="GET" class="mt-80 flex flex-col">
+				<input
+					type="text"
+					class="border-b border-blue-800 placeholder-slate-400 contrast-more:border-blue-800 contrast-more:placeholder-slate-500 text-center mx-0 my-3 placeholder:text-center max-w-[200px] px-2 py-1"
+					placeholder="Enter Code"
+					name="join"
+				/>
+				<button
+					class="border border-blue-800 px-4 max-w-[200px] py-1 rounded-md"
+					type="submit"
+				>
+					Join
+				</button>
+
+				<button
+					class="border px-4 my-6 max-w-[200px] bg-sky-800 text-white py-2 rounded-md"
+				>
+					<a href="/new-meeting"> New Meeting</a>
+				</button>
+			</form>
+		</div>
+	</body>
 </html>

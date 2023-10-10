@@ -33,31 +33,26 @@
 
 		<title>Zoom Clone</title>
 	</head>
-	<body>
-		<div class="main">
-			<div class="main__left">
-				<div id="video-grid"></div>
-				<div class="controls">
-					<button onclick="muteUnmute()" class="audio">
-						<span>Mute</span>
-					</button>
-					<button onclick="playStop()" class="video-btn">VIDEO</button>
-					<button>
-						<a href="/">HANGUP</a>
-					</button>
-				</div>
-			</div>
-			<div class="main__right">
-				<div class="main__header">CHAT</div>
-				<div class="main__chat_window">
-					<ul class="messages"></ul>
-				</div>
-				<div class="main__message_container">
-					<input
-						id="chat_message"
-						type="text"
-						placeholder="Type Your Message Here"
-					/>
+	<body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+		<div class="h-[100vh] relative flex flex-col justify-center items-center">
+			<image src="/iphone 1.png" class="h-[600px] m-auto media-class" />
+		</div>
+
+		<div
+			class="flex flex-col justify-center items-center text-center bg-color-red absolute bottom-0 left-0 top-0 right-0 m-auto max-w-[270px]"
+		>
+			<div class="main">
+				<div class="main__left">
+					<div id="video-grid"></div>
+					<div class="controls">
+						<button onclick="muteUnmute()" class="audio">
+							<span>Mute</span>
+						</button>
+						<button onclick="playStop()" class="video-btn">Stop Video</button>
+						<button>
+							<a href="/">HANGUP</a>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
